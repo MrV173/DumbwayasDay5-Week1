@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+          <ul>
+            <li>
+              <img src="img/dumbways.png">
+            </li>
+            <li class="item-collapse">
+              <a class="active" href="index.html">Home</a>
+            </li>
+            <li class="item-collapse">
+              <a href="blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right item-collapse">
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-right" id="barsmenu">
+          <button
+            style="background-color: transparent; border: none; cursor: pointer"
+            onclick="openHamburger()"
+          >
+            <i class="fa-2x fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+  
+      <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html">Home</a>
+        <a href="blog.html" class="hamburger-active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    <div class="blog">
+        <div class="blog-form">
+            <div class="form-container">
+                <form onsubmit="blog(event); checkbox();">
+                    <h1>ADD MY PROJECT</h1>
+                    <div class="container1">
+                    <div>
+                        <div><label for="title">Project Name</label></div>
+                        <input type="text" id="title" class="border">
+                    </div>
+                <div style="display: flex; width: 100%; margin-top: 15px;">
+                    <div>
+                        <label for="start-date">Start</label>
+                        <input type="month" id="start" class="border">
+                    </div>
+                    <div style="margin-left: 20px;">
+                        <label for="end-date">End</label>
+                        <input type="month" id="end" class="border">
+                    </div>
+                </div>
+                    <div>
+                        <div style="margin-top: 15px;"><label for="description">Description</label></div>
+                        <textarea name="" id="description" cols="30" rows="5"></textarea>
+                    </div>
+                    </div>
+                    <div style="font-size: 20px; font-weight: 300;">
+                    <div>
+                        <h3>Technologies</h3>
+                    </div>
+                    <div style="display: flex; margin-bottom: 20px;">
+                        <input type="checkbox" name="technologies" id="node-js"> Node Js
+                        <div style="margin-left: 15px;">
+                        <input type="checkbox" name="technologies" id="react-js"> React Js
+                        </div>
+                    </div>
+                    <div style="display: flex; margin-bottom: 20px;">
+                        <input type="checkbox" name="technologies" id="next-js"> Next Js
+                        <div style="margin-left: 15px;">
+                        <input type="checkbox" name="technologies" id="typescript"> TypeScript
+                        </div>
+                    </div>
+                    </div>
+                    <div>
+                        <label>Upload Image</label>
+                        <div class="input-blog-image">
+                        <label for="input-blog-image">
+                            
+                            <div class="choose" 
+                            style=" 
+                            border: none;
+                            background-color: grey;
+                            color: white;
+                            ">
+                            Choose
+                            </div>
+                            <img src="img/attach-button.png" alt="" style="width: 20px; align-items: right; justify-content: right">
+                        </label>
+                        <input type="file" id="input-blog-image" hidden>
+                    </div>
+                    <div class="button">
+                        <button> Submit </button>
+                    </div>
+                `   </div>
+                </form>
+            </div>
+        </div>
+        <center>
+    <h1>My Project</h1>
+        </center>
+    <div class="post">
+        <a href="post.html">
+        <div class="anu">
+            <div>
+                <img src="img/hp2.jpg">
+            </div>
+                <div class="judul">Dumbways Mobile App - 2021</div>
+                <div>Durasi : 3 bulan </div>
+                <div class="description"> App that used for dumbways student. it was deployed and can 
+                 downloaded on playstore. Happy download</div>
+            <div class="logo" id="tampil">
+                <div><i class="fa-brands fa-google-play"></i></div>
+                <div style="margin-left: 15px;"><i class="fa-brands fa-android"></i></div>
+                <div style="margin-left: 15px;"><i class="fa-brands fa-java"></i></div>
+            </div>
+            <div>
+                <div class="tombol">
+                    <div>
+                        <button class="btn-edit">Edit</button>
+                    </div>
+                    <div>
+                        <button class="btn-delete">Delete</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        </a>
+
+
+    <a href="post.html">
+        <div class="anu">
+            <div>
+                <img src="img/hp2.jpg">
+            </div>
+                <div class="judul">Dumbways Mobile App - 2021</div>
+                <div>Durasi : 3 bulan </div>
+                <div class="description"> App that used for dumbways student. it was deployed and can 
+                 downloaded on playstore. Happy download</div>
+            <div class="logo" id="tampil">
+                <div><i class="fa-brands fa-google-play"></i></div>
+                <div style="margin-left: 15px;"><i class="fa-brands fa-android"></i></div>
+                <div style="margin-left: 15px;"><i class="fa-brands fa-java"></i></div>
+            </div>
+            <div>
+                <div class="tombol">
+                    <div>
+                        <button class="btn-edit">Edit</button>
+                    </div>
+                    <div>
+                        <button class="btn-delete">Delete</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </a>
+
+    <a href="post.html">
+        <div class="anu">
+            <div>
+                <img src="img/hp2.jpg">
+            </div>
+                <div class="judul">Dumbways Mobile App - 2021</div>
+                <div>Durasi : 3 bulan </div>
+                <div class="description"> App that used for dumbways student. it was deployed and can 
+                 downloaded on playstore. Happy download</div>
+            <div class="logo" id="tampil">
+                <div><i class="fa-brands fa-google-play"></i></div>
+                <div style="margin-left: 15px;"><i class="fa-brands fa-android"></i></div>
+                <div style="margin-left: 15px;"><i class="fa-brands fa-java"></i></div>
+            </div>
+            <div>
+                <div class="tombol">
+                    <div>
+                        <button class="btn-edit">Edit</button>
+                    </div>
+                    <div>
+                        <button class="btn-delete">Delete</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </a>
+
+    <a href="post.html">
+        <div class="anu">
+            <div>
+                <img src="img/hp2.jpg">
+            </div>
+                <div class="judul">Dumbways Mobile App - 2021</div>
+                <div>Durasi : 3 bulan </div>
+                <div class="description"> App that used for dumbways student. it was deployed and can 
+                 downloaded on playstore. Happy download</div>
+            <div class="logo" id="tampil">
+                <div><i class="fa-brands fa-google-play"></i></div>
+                <div style="margin-left: 15px;"><i class="fa-brands fa-android"></i></div>
+                <div style="margin-left: 15px;"><i class="fa-brands fa-java"></i></div>
+            </div>
+            <div>
+                <div class="tombol">
+                    <div>
+                        <button class="btn-edit">Edit</button>
+                    </div>
+                    <div>
+                        <button class="btn-delete">Delete</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </a>
+    </div>
+
+    <div id="contents" class="post"></div>
+
+<script src="js/blog.js"></script>
+</body>
+</html>

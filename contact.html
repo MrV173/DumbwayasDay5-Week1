@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Me </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+          <ul>
+            <li>
+              <img src="img/dumbways.png">
+            </li>
+            <li class="item-collapse">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="item-collapse">
+              <a href="blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right item-collapse">
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-right" id="barsmenu">
+          <button
+            style="background-color: transparent; border: none; cursor: pointer"
+            onclick="openHamburger()"
+          >
+            <i class="fa-2x fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+  
+      <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="hamburger-active">Contact</a>
+        </div>
+    <form action="" style="margin-top: 20px;">
+        <div>
+            <label for="name"> Name </label>
+            <input id="name" type="text" style="margin-bottom: 10px;" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" style="margin-bottom: 10px;" required>
+        </div>
+        <div>
+            <label for="number">Phone Number</label>
+            <input id="number" type="number" style="margin-bottom: 10px;" required>
+        </div>
+        <div>
+            <label for="subject">Subject</label>
+            <select name="" id="subject">
+            <option value="" hidden>Select</option>
+            <option>Frontend</option>
+            <option>Backend</option>
+            <option>Fullstack</option>
+            </select>
+        </div>
+        <div>    
+            <label for="textarea">Comment</label><br>
+            <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="button" onclick="submitData()">Submit</button>
+        </div>   
+    </form>
+    <script src="js/contact.js"></script>   
+    <script src="js/hamburger.js"></script>
+</body>
+</html>
