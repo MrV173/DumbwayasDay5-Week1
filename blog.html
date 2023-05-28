@@ -46,7 +46,7 @@
     <div class="blog">
         <div class="blog-form">
             <div class="form-container">
-                <form onsubmit="blog(event); checkbox();">
+                <form onsubmit="blog(event);">
                     <h1>ADD MY PROJECT</h1>
                     <div class="container1">
                     <div>
@@ -56,11 +56,11 @@
                 <div style="display: flex; width: 100%; margin-top: 15px;">
                     <div>
                         <label for="start-date">Start</label>
-                        <input type="month" id="start" class="border">
+                        <input type="month" id="start-month" class="border">
                     </div>
                     <div style="margin-left: 20px;">
                         <label for="end-date">End</label>
-                        <input type="month" id="end" class="border">
+                        <input type="month" id="end-month" class="border">
                     </div>
                 </div>
                     <div>
@@ -81,7 +81,7 @@
                     <div style="display: flex; margin-bottom: 20px;">
                         <input type="checkbox" name="technologies" id="next-js"> Next Js
                         <div style="margin-left: 15px;">
-                        <input type="checkbox" name="technologies" id="typescript"> TypeScript
+                        <input type="checkbox" name="technologies" id="php"> PHP
                         </div>
                     </div>
                     </div>
@@ -194,37 +194,11 @@
             </div>    
         </div>
     </a>
-
-    <a href="post.html">
-        <div class="anu">
-            <div>
-                <img src="img/hp2.jpg">
-            </div>
-                <div class="judul">Dumbways Mobile App - 2021</div>
-                <div>Durasi : 3 bulan </div>
-                <div class="description"> App that used for dumbways student. it was deployed and can 
-                 downloaded on playstore. Happy download</div>
-            <div class="logo" id="tampil">
-                <div><i class="fa-brands fa-google-play"></i></div>
-                <div style="margin-left: 15px;"><i class="fa-brands fa-android"></i></div>
-                <div style="margin-left: 15px;"><i class="fa-brands fa-java"></i></div>
-            </div>
-            <div>
-                <div class="tombol">
-                    <div>
-                        <button class="btn-edit">Edit</button>
-                    </div>
-                    <div>
-                        <button class="btn-delete">Delete</button>
-                    </div>
-                </div>
-            </div>    
-        </div>
-    </a>
     </div>
 
-    <div id="contents" class="post"></div>
+    <div class= "post" id="contents"></div>
 
 <script src="js/blog.js"></script>
+<script src="js/hamburger.js"></script>
 </body>
 </html>

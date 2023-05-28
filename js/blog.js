@@ -1,31 +1,67 @@
 
-
-
 let dataBlog = [];
 
 function blog(event) {
     event.preventDefault();
-
+    let nodejs = document.getElementById("node-js");
+    let reactjs = document.getElementById("react-js");
+    let nextjs = document.getElementById("next-js");
+    let php = document.getElementById("php");
+    let logonjs = '<i class="fa-brands fa-node-js"></i>';
+    let logorjs = '<i class="fa-brands fa-react"></i>';
+    let logonextjs = '<i class="fa-brands fa-neos"></i>';
+    let logophp = '<i class="fa-brands fa-php"></i>';
+    let empty ='';
     let title = document.getElementById("title").value;
     let content = document.getElementById("description").value;
     let image = document.getElementById("input-blog-image").files;
-    let start = document.getElementById("start").value;
-    let end = document.getElementById("end").value;
+    let startDay = document.getElementById("start-month").value;
+    let endDay = document.getElementById("end-month").value;
+    let start = new Date(startDay);
+    let end = new Date (endDay);
+    let durasi = ( end.getMonth() + 1 ) - ( start.getMonth() + 1 ); 
+    
+    if(nodejs.checked) {
+        nodejs = logonjs;   
+    } else {
+        nodejs = empty;
+    }
 
+    if(reactjs.checked) {
+        reactjs =logorjs;
+    } else {
+        reactjs = empty;
+    }
 
-    image = URL.createObjectURL(image[0]);
-    console.log(start);
-    console.log(end);
+    if(nextjs.checked) {
+        nextjs = logonextjs;
+    } else {
+        nextjs = empty;
+    } 
 
+    if(php.checked) {
+        php = logophp;
+    } else {
+        php = empty;
+    }
+    
+    
+
+    image = URL.createObjectURL(image[0]); 
+    console.log(image);
     let blog = {
         title,
         content,
         image,
-        postAt: new Date(),
-        author: "M.ibnu hakim",
+        postAt: new Date (),
+        author : "M ibnuh hakim",
         start,
         end,
-        
+        durasi,
+        nodejs,
+        reactjs,
+        nextjs,
+        php
     };
 
 dataBlog.push(blog)
@@ -45,17 +81,26 @@ function renderBlog() {
               <img src="${dataBlog[index].image}">
           </div>
               <div class="judul">${dataBlog[index].title}</div>
-              <div>Durasi : 3 bulan </div>
+              <div>Durasi : ${dataBlog[index].durasi} bulan </div>
               <div class="detail-blog-content">
-                ${getFullTime(dataBlog[index].postAt)} | ${
-      dataBlog[index].author
-    }
+              <p>
+                ${getFullTime(dataBlog[index].postAt)} | ${dataBlog[index].author}
+              </p>
             </div>
               <div class="description">${dataBlog[index].content}</div>
-          <div class="logo" id="tampil">
-              <div><i class="fa-brands fa-google-play"></i></div>
-              <div style="margin-left: 15px;"><i class="fa-brands fa-android"></i></div>
-              <div style="margin-left: 15px;"><i class="fa-brands fa-java"></i></div>
+              <div style="display: flex; font-size: 30px; color: black; font-weight: bold;">
+              <div style="margin-left: 10px;"> 
+                  ${dataBlog[index].nodejs} 
+              </div>
+              <div style="margin-left: 10px;">
+                  ${dataBlog[index].reactjs} 
+              </div>
+              <div style="margin-left: 10px;">
+                  ${dataBlog[index].nextjs} 
+              </div>
+              <div style="margin-left: 10px;">
+                  ${dataBlog[index].php}
+              </div>
           </div>
           <div>
               <div class="tombol">
