@@ -247,3 +247,17 @@ img {
     margin-left: 15px;
     height: 480px;
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .post {
+        margin: auto;
+        display: grid;
+        flex-direction: row;
+        grid-template-columns:auto ;
+        align-items: center;
+        justify-content: space-evenly
+    }
+    
+
+}
